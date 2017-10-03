@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
+ course = [1,2] 
   title = 'app';
   tweet = {
     body: "Here is some tweet",

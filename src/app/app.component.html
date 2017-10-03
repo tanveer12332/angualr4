@@ -23,4 +23,13 @@
         </div>
 
     </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div *ngIf="course.length > 0; then coursesList else noCourses"></div>
+            <ng-template #coursesList>
+                List of couse
+            </ng-template>
+            <ng-template #noCourses>no course </ng-template>
+        </div>
+    </div>
 </div>

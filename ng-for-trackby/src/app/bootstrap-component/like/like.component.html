@@ -1,2 +1,7 @@
-<span class="glyphicon" [class.glyphicon-heart]="isLike" [class.glyphicon-heart-empty]="!isLike" (click)="onClick()"></span>
+<span class="glyphicon" 
+ [ngClass]="{
+     'glyphicon-heart':isLike,
+    'glyphicon-heart-empty':!isLike
+            }"
+  (click)="onClick()"></span>
 <label>{{isLikeCount}}</label>

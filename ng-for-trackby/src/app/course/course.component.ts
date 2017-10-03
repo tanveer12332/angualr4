@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class CourseComponent {
 public courses;
-isActive = true;
+isActive = false;
   constructor(public cs:CoursesService) {
     this.courses =  cs.getCourses();
    }

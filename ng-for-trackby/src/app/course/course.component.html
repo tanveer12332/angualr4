@@ -4,4 +4,9 @@
 <ul class="list-inline">
     <li *ngFor="let item of courses">{{item}}</li>
 </ul>
-<button class="btn" [style.backgroundColor]="isActive ? 'blue' : 'green'">Save</button>
+<button class="btn"
+ [ngStyle]="{
+     'backgroundColor' : isActive ? 'blue' : 'gray',
+     'color': isActive ? 'black' : 'white'
+ }"
+>Save</button>

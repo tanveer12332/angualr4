@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <app-course></app-course>
+            <div class="well-sm"> </div>
+            <panel>
+                <ng-container class="heading">
+                    panel heading
+                </ng-container>
+                <ng-container class="body">
+                    panel body
+                </ng-container>
+            </panel>
+            <panel>
+                <ng-container class="heading">
+                    panel heading 2
+                </ng-container>
+                <ng-container class="body">
+                    panel body 2
+                </ng-container>
+            </panel>
+            <like [like-count]="tweet.likeCount" [is-Active]="tweet.isLiked" (change)="likeCountChange($event)"></like>
+        </div>
+
+    </div>
+</div>

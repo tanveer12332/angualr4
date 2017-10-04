@@ -9,8 +9,7 @@ export class ZipeComponent {
 @Input('title') title;
 isExpanded:boolean = true;
   constructor() { }
-
   Collaspe(){
-this.isExpanded = !this.isExpanded;
+  this.isExpanded = !this.isExpanded;
   }
 }

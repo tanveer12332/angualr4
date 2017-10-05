@@ -1,4 +1,4 @@
-<form>
+<form #f="ngForm">
     <div class="form-group">
         <label for="" class="control-label">First Name</label>
         <input type="text" minlength="5" ngModel name="firstName" #firstName="ngModel" required class="form-control">
@@ -15,5 +15,26 @@
             <div *ngIf="comments.errors.required">Commensts is required</div>
         </div>
     </div>
-    <button class="btn btn-primary">Save</button>
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="isSubcribe" ngModel> isSubcribe
+            </label>
+        </div>
+    </div>
+    <div class="radio">
+        <label>
+              <input type="radio" name="optionsRadios" ngModel id="optionsRadios1" value="option1">
+              Option one 
+            </label>
+    </div>
+    <div class="radio">
+        <label>
+              <input type="radio" name="optionsRadios" ngModel id="optionsRadios2" value="option2">
+              Option two 
+            </label>
+    </div>
+    <p>{{f.value | json}}</p>
+
+    <button class="btn btn-primary" [disabled]="!f.valid">Save</button>
 </form>

@@ -1,0 +1,15 @@
+<div class="zipContainer">
+    <div class="zip-heading clearfix">
+        <div class="pull-left">{{title}}</div>
+        <span class="glyphicon pull-right" [ngClass]="{
+      'glyphicon-chevron-up': isExpanded,
+      'glyphicon-chevron-down': !isExpanded
+    }" (click)="Collaspe()">
+    </span>
+    </div>
+    <div class="zip-body" *ngIf="isExpanded">
+        <ng-content>
+
+        </ng-content>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<form>
+    <div class="form-group" [formGroup]="form">
+        <label for="" class="control-label">First Name</label>
+        <input type="text" class="form-control" formControlName="username">
+        <div class="alert alert-danger" *ngIf="username.touched && username.invalid">
+            <div *ngIf="username.errors.required">Username is requried</div>
+            <div *ngIf="username.errors.minlength">user must bi minmum {{username.errors.minlength.requiredLength}} character </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Password</label>
+        <input type="text" class="form-control">
+    </div>
+    <button class="btn btn-primary">Save</button>
+</form>

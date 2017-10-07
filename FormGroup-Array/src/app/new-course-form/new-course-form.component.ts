@@ -18,7 +18,7 @@ export class NewCourseFormComponent  {
     topies.value = "";
   }
    get topies(){
-  return this.form.get('topies') as FormArray;
+    return this.form.get('topies') as FormArray;
    }
    removeTopic(topic:FormControl){
     let index = this.topies.controls.indexOf(topic);

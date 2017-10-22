@@ -25,6 +25,8 @@ export class DummydataComponent implements OnInit {
     post['id'] = res.json().id
      this.posts.splice(0,0,post);
     // this.post = res.json().title;
+   },error =>{
+    alert("unexpected error")
    })
   }
   UpdatePost(post){

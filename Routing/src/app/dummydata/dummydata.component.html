@@ -1,0 +1,13 @@
+<div class="form-group">
+  <label>Enter your name</label>
+  <input type="text" (keyup.enter)="addPost(d)" #d class="form-control">
+</div>
+
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let p of posts">
+    <h4>{{p.title}}</h4>
+    <button class="btn btn-primary btn-sm" (click)="UpdatePost(p)">Update</button>
+    <button class="btn btn-primary btn-sm" (click)="DeletePost(p)">Delete</button>
+  </li>
+</ul>
